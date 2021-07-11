@@ -41,7 +41,10 @@
           />
         </svg>
       </button>
-      <a href="" class="btnGit btn">
+      <a
+        href="https://github.com/caraseli02/tabs-component/blob/master/src/components/Tabs.vue"
+        class="btnGit btn"
+      >
         <svg
           width="24"
           height="24"
