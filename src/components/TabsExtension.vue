@@ -17,6 +17,7 @@
         </li>
       </ul>
     </nav>
+
     <!-- Add transition between content -->
     <transition-group name="slide-fade" mode="out-in">
       <!-- Loop over default o pased props to display content-->
@@ -25,13 +26,17 @@
         :key="index"
         v-show="selectedTab === index"
       >
-        <h3 v-show="content.title">{{ content.title }}</h3>
-        <p v-show="content.text">
-          {{ content.text }}
-        </p>
-        <img v-show="content.img" class="card__img" :src="content.img" />
+        <slot name="tabContent" :content="content">
+          <h3 v-show="content.title">{{ content.title }}</h3>
+          <p v-show="content.text">
+            {{ content.text }}
+          </p>
+          <img v-show="content.img" class="card__img" :src="content.img" />
+        </slot>
       </div>
     </transition-group>
+    <slot name="ref"> </slot>
+    <slot name="date"> </slot>
   </section>
 </template>
 
@@ -76,6 +81,12 @@ export default {
   methods: {
     changeSelectedTab(index) {
       this.selectedTab = index;
+    },
+    next() {
+      this.selectedTab++;
+    },
+    prev() {
+      this.selectedTab--;
     },
   },
   mounted() {

@@ -2,9 +2,9 @@ export default `
 // Props
 // src/App.vue
 ...
-<TabsProps />
+<TabsExtension />
 ...
-// src/components/TabsProps.vue
+// src/components/TabsExtension.vue
 
 <template>
   <section>

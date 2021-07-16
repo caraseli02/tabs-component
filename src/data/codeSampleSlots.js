@@ -2,7 +2,7 @@ export default `
 // Slots
 // src/App.vue
 ...
-      <TabsSlots
+      <TabsInversion
         :incomingData="tabsContent"
         :tabs="tabs"
       >
@@ -21,7 +21,7 @@ export default `
             />
           </div>
         </template>
-      </TabsSlots>
+      </TabsInversion>
 ...
 <style>
 .slotGrid {
@@ -36,7 +36,7 @@ export default `
 }
 </style>
 ...
-// src/components/TabsProps.vue
+// src/components/TabsExtension.vue
 
 <template>
   <section>

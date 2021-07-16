@@ -13,10 +13,7 @@
           :key="index"
           @click="changeSelectedTab(index)"
         >
-          <!-- Add implementation of scope-slots -->
-          <slot name="tabName" :tab="tab">
-            <h3 :class="{ active: selectedTab === index }">{{ tab }}</h3>
-          </slot>
+          <h3 :class="{ active: selectedTab === index }">{{ tab }}</h3>
         </li>
       </ul>
     </nav>
