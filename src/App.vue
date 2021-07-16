@@ -8,8 +8,9 @@
         This can also be used as a pseudo-navigation for a page, where the tabs
         are links and the tab-items are the content.
       </p>
-      <a href="https://michaelnthiessen.com/6-levels-of-reusability/"
-        >The 6 Levels of Reusability</a
+
+      <a href="https://michaelnthiessen.com/6-levels-of-reusability/">
+        <span> Titles inspired from:</span> The 6 Levels of Reusability</a
       >
     </div>
     <!-- TEMPLATING EXAMPLE -->
