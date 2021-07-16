@@ -1,3 +1,5 @@
+export default `
+
 // The Tabs component is used for hiding content behind a selectable item. This
 // can also be used as a pseudo-navigation for a page, where the tabs are links
 // and the items are the content.
@@ -16,7 +18,6 @@
       <i v-if="showIcons" :class="tab.icon"></i>
       {{ tab.name }}
     </span>
-    <slot>Loading...</slot>
   </nav>
 </template>
 
@@ -71,3 +72,5 @@ export default {
   border-bottom: 2.5px solid;
 }
 </style>
+
+`;

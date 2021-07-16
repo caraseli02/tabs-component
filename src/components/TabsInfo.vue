@@ -19,7 +19,10 @@
         />
       </svg>
     </button>
-    <a :href="github" class="btnGit btn">
+    <a
+      :href="`https://github.com/caraseli02/tabs-component/blob/master/src/components${github}`"
+      class="btnGit btn"
+    >
       <svg
         width="24"
         height="24"
@@ -77,7 +80,7 @@ export default {
     },
     github: {
       type: String,
-      default: "https://github.com/caraseli02/tabs-component",
+      default: "/",
     },
     code: {
       type: String,

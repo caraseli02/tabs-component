@@ -1,17 +1,5 @@
 <template>
   <div id="app">
-    <!-- USING TAGS IN HEADER -->
-    <header>
-      <Tabs :tabs="links">
-        <!--Using Scoped Slots to change <h3/> tag in <a/> anchor, and make it UpperCase.
-       -->
-        <template slot="tabName" slot-scope="{ tab }">
-          <a :href="`#${tab.trim()}`" class="testLink">{{
-            tab.toUpperCase()
-          }}</a>
-        </template>
-      </Tabs>
-    </header>
     <!-- TAGS DESCRIPTION -->
     <div class="intro">
       <h1>Reusability of Tabs Component</h1>
@@ -25,35 +13,47 @@
       >
     </div>
     <!-- TEMPLATING EXAMPLE -->
-    <div id="Default" class="componentExample">
-      <TabsInfo
-        github="https://github.com/caraseli02/tabs-component/blob/master/src/components/Tabs.vue"
-        subtitle="Templating"
-        :code="codeSample"
-      />
+    <div class="componentExample">
+      <TabsInfo github="/Tabs.vue" subtitle="Templating" :code="codeSample" />
       <Tabs />
     </div>
     <!-- CONFIGURATION EXAMPLE -->
-    <div id="Default" class="componentExample">
-      <TabsInfo subtitle="Configuration" />
+    <div class="componentExample">
+      <TabsInfo
+        github="/TabsConfig.vue"
+        :code="codeConfig"
+        subtitle="Configuration"
+      />
       <TabsConfig :showIcons="true" />
     </div>
     <!-- ADAPTABILITY EXAMPLE -->
-    <div id="Default" class="componentExample">
-      <TabsInfo subtitle="Adaptability" />
+    <div class="componentExample">
+      <TabsInfo
+        github="/TabsAdaptability.vue"
+        :code="codeAdaptability"
+        subtitle="Adaptability"
+      />
       <TabsAdaptability :showIcons="true">
         <Skeleton :count="2" height="100px" />
         <span>Loading...</span>
       </TabsAdaptability>
     </div>
     <!--INVERSION EXAMPLE -->
-    <div id="Slots" class="componentExample {">
-      <TabsInfo subtitle="Inversion" :code="codeSampleSlots" />
+    <div class="componentExample {">
+      <TabsInfo
+        github="/TabsInversion.vue"
+        subtitle="Inversion"
+        :code="codeInversion"
+      />
       <TabsInversion :incomingData="tabsContent" :tabs="tabs"> </TabsInversion>
     </div>
     <!-- EXTENSION EXAMPLE -->
     <div id="Props" class="componentExample {">
-      <TabsInfo subtitle="Extension" :code="codeSampleProps" />
+      <TabsInfo
+        github="/TabsExtension.vue"
+        subtitle="Extension"
+        :code="codeExtension"
+      />
       <TabsExtension>
         <template v-slot:ref>
           <h4>Photos from Lorem Picsum</h4>
@@ -74,9 +74,13 @@ import TabsExtension from "@/components/TabsExtension.vue";
 import TabsInversion from "@/components/TabsInversion.vue";
 import TabsInfo from "@/components/TabsInfo.vue";
 import tabsContent from "@/data/tabsContent";
-import codeSample from "@/data/codeSample";
-import codeSampleProps from "@/data/codeSampleProps";
-import codeSampleSlots from "@/data/codeSampleSlots";
+import {
+  codeSample,
+  codeConfig,
+  codeAdaptability,
+  codeInversion,
+  codeExtension,
+} from "@/data/codeSample";
 import "../node_modules/vue-code-highlight/themes/prism-tomorrow.css";
 import { Skeleton } from "vue-loading-skeleton";
 
@@ -90,8 +94,10 @@ export default {
       //same as tabsContent : tabsContent
       tabsContent,
       codeSample,
-      codeSampleProps,
-      codeSampleSlots,
+      codeConfig,
+      codeAdaptability,
+      codeInversion,
+      codeExtension,
       today: new Date().toLocaleString(),
     };
   },
