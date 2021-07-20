@@ -89,7 +89,7 @@ import {
 import { Skeleton } from "vue-loading-skeleton";
 
 export default {
-  name: "App",
+  name: "Home",
   data() {
     return {
       codeTemplating,

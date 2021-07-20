@@ -4,9 +4,12 @@
       <!--Using Scoped Slots to transform tab in <router-link/> and make it UpperCase.
        -->
       <template slot-scope="{ tab }">
-        <router-link :to="{ name: tab }" class="testLink">{{
-          tab.toUpperCase()
-        }}</router-link>
+        <router-link
+          :class="{ active: $route.name === tab }"
+          :to="{ name: tab }"
+          class="testLink"
+          >{{ tab.toUpperCase() }}</router-link
+        >
       </template>
     </Tabs>
     <transition name="slide-fade" mode="out-in">
@@ -23,7 +26,7 @@ export default {
   name: "App",
   data() {
     return {
-      links: ["Home", "About"],
+      links: ["Home", "Nesting"],
     };
   },
   components: {

@@ -9,13 +9,12 @@
     <span
       v-for="(tab, index) in tabs"
       :key="index"
-      @click="changeSelectedTab(index)"
+      @click="changeSelectedTab(tab)"
       class="tabsMargin"
-      :class="{ active: selectedTab === index }"
     >
       <!-- Scoped Slots -->
       <slot :tab="tab">
-        {{ tab }}
+        <span :class="{ active: selectedTab === tab }"> {{ tab }}</span>
       </slot>
     </span>
   </nav>
@@ -38,12 +37,12 @@ export default {
     };
   },
   methods: {
-    changeSelectedTab(index) {
-      this.selectedTab = index;
+    changeSelectedTab(tab) {
+      this.selectedTab = tab;
     },
   },
   mounted() {
-    this.changeSelectedTab(0);
+    this.changeSelectedTab(this.tabs[0]);
   },
 };
 </script>
