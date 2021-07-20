@@ -58,7 +58,6 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 15px;
   margin: 0 auto;
   width: 100px;
   height: 50px;

@@ -123,9 +123,6 @@ ul {
 }
 
 .card {
-  &__content {
-  }
-
   &__img {
     max-width: 90vw;
   }

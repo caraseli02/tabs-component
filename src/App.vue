@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- TAGS DESCRIPTION -->
-    <div class="intro">
+    <div>
       <h1>Reusability of Tabs Component</h1>
       <p>
         The Tabs component is used for hiding content behind a selectable item.
@@ -125,13 +125,17 @@ export default {
 
 <style lang="scss">
 @import "./assets/icons.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  padding: 20px;
 }
 
 h2 {
@@ -149,53 +153,15 @@ a {
 
 .slide-fade-enter,
   .slide-fade-leave-to
-
   /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateY(-10px);
   opacity: 0;
 }
 
-.testLink {
-  font-size: 1rem;
-  color: black;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-
-  p {
-    text-align: left;
-    font-size: 1.2rem;
-  }
-}
-
 .componentExample {
   position: relative;
-  background-color: rgb(250, 247, 247);
   padding: 100px 2% 50px;
   margin: 5%;
-}
-.makeRelative {
-  position: relative;
-}
-
-.slotGrid {
-  display: grid;
-  grid-template-areas:
-    "img title "
-    "img text ";
-
-  &__img {
-    grid-area: img;
-  }
-}
-
-.AdaptabilityBG {
-  background-color: black;
-  margin: 2%;
 }
 
 .ref {
