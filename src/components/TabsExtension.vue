@@ -3,7 +3,7 @@
 // and the items are the content.
 
 <template>
-  <section>
+  <article>
     <!-- Navigation Tabs  -->
     <nav class="tabs-container">
       <ul class="tabs-list">
@@ -37,7 +37,7 @@
     </transition-group>
     <slot name="ref"> </slot>
     <slot name="date"> </slot>
-  </section>
+  </article>
 </template>
 
 <script>

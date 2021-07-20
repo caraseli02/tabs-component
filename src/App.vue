@@ -1,34 +1,35 @@
 <template>
   <div id="app">
     <!-- TAGS DESCRIPTION -->
-    <div>
+    <section>
       <h1>Reusability of Tabs Component</h1>
+      <br />
       <p>
         The Tabs component is used for hiding content behind a selectable item.
         This can also be used as a pseudo-navigation for a page, where the tabs
         are links and the tab-items are the content.
       </p>
-
+      <br />
       <a href="https://michaelnthiessen.com/6-levels-of-reusability/">
         <span> Titles inspired from:</span> The 6 Levels of Reusability</a
       >
-    </div>
+    </section>
     <!-- TEMPLATING EXAMPLE -->
-    <div class="componentExample">
+    <section class="codeExample">
       <TabsInfo github="/Tabs.vue" subtitle="Templating" :code="codeSample" />
       <Tabs />
-    </div>
+    </section>
     <!-- CONFIGURATION EXAMPLE -->
-    <div class="componentExample">
+    <section class="codeExample">
       <TabsInfo
         github="/TabsConfig.vue"
         :code="codeConfig"
         subtitle="Configuration"
       />
       <TabsConfig :showIcons="true" />
-    </div>
+    </section>
     <!-- ADAPTABILITY EXAMPLE -->
-    <div class="componentExample">
+    <section class="codeExample">
       <TabsInfo
         github="/TabsAdaptability.vue"
         :code="codeAdaptability"
@@ -38,18 +39,18 @@
         <Skeleton :count="2" height="100px" />
         <span>Loading...</span>
       </TabsAdaptability>
-    </div>
+    </section>
     <!--INVERSION EXAMPLE -->
-    <div class="componentExample {">
+    <section class="codeExample {">
       <TabsInfo
         github="/TabsInversion.vue"
         subtitle="Inversion"
         :code="codeInversion"
       />
       <TabsInversion :incomingData="tabsContent" :tabs="tabs"> </TabsInversion>
-    </div>
+    </section>
     <!-- EXTENSION EXAMPLE -->
-    <div id="Props" class="componentExample {">
+    <section id="Props" class="codeExample {">
       <TabsInfo
         github="/TabsExtension.vue"
         subtitle="Extension"
@@ -60,10 +61,10 @@
           <h4>Photos from Lorem Picsum</h4>
         </template>
         <template v-slot:date>
-          <span>{{ today }}</span>
+          {{ today }}
         </template>
       </TabsExtension>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -144,6 +145,7 @@ h2 {
 
 a {
   text-decoration: none;
+  color: green;
 }
 
 .slide-fade-enter-active,
@@ -158,7 +160,7 @@ a {
   opacity: 0;
 }
 
-.componentExample {
+section {
   position: relative;
   padding: 100px 2% 50px;
   margin: 5%;
