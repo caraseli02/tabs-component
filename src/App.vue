@@ -16,7 +16,11 @@
     </section>
     <!-- TEMPLATING EXAMPLE -->
     <section class="codeExample">
-      <TabsInfo github="/Tabs.vue" subtitle="Templating" :code="codeSample" />
+      <TabsInfo
+        github="/Tabs.vue"
+        subtitle="Templating"
+        :code="codeTemplating"
+      />
       <Tabs />
     </section>
     <!-- CONFIGURATION EXAMPLE -->
@@ -77,11 +81,11 @@ import TabsInversion from "@/components/TabsInversion.vue";
 import TabsInfo from "@/components/TabsInfo.vue";
 import tabsContent from "@/data/tabsContent";
 import {
-  codeSample,
   codeConfig,
   codeAdaptability,
   codeInversion,
   codeExtension,
+  codeTemplating,
 } from "@/data/codeSample";
 import "../node_modules/vue-code-highlight/themes/prism-tomorrow.css";
 import { Skeleton } from "vue-loading-skeleton";
@@ -95,7 +99,7 @@ export default {
       //import Tabs Content Data from @/data/tabsContent.js
       //same as tabsContent : tabsContent
       tabsContent,
-      codeSample,
+      codeTemplating,
       codeConfig,
       codeAdaptability,
       codeInversion,

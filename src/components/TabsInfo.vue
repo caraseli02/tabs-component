@@ -38,7 +38,7 @@
         ></path>
       </svg>
     </a>
-    <div v-if="showCode" class="makeRelative">
+    <div v-if="showCode" class="codeContainer">
       <button
         class="btn"
         type="button"
@@ -91,6 +91,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.codeContainer {
+  position: relative;
+}
 .subtitle {
   position: absolute;
   top: 0px;
