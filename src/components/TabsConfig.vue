@@ -35,7 +35,7 @@ export default {
       default: false,
     },
   },
-  name: "TabsCnfig",
+  name: "TabsConfig",
   data() {
     return {
       selectedTab: null,

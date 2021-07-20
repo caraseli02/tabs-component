@@ -35,7 +35,9 @@
         </slot>
       </div>
     </transition-group>
-    <slot v-if="incomingData[selectedTab]['img']" name="ref"> </slot>
+    <template v-if="incomingData[selectedTab]">
+      <slot v-if="incomingData[selectedTab]['img']" name="ref"> </slot>
+    </template>
     <slot name="date"> </slot>
   </article>
 </template>

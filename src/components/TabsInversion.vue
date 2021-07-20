@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  name: "TabsInversion",
   props: {
     tabs: {
       type: Array,
@@ -75,7 +76,6 @@ export default {
       default: true,
     },
   },
-  name: "Tabs",
   data() {
     return {
       selectedTab: null,

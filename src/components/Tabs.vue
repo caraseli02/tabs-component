@@ -13,7 +13,10 @@
       class="tabsMargin"
       :class="{ active: selectedTab === index }"
     >
-      {{ tab }}
+      <!-- Scoped Slots -->
+      <slot :tab="tab">
+        {{ tab }}
+      </slot>
     </span>
   </nav>
 </template>
