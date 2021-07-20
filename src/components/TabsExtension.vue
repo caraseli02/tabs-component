@@ -3,7 +3,7 @@
 // and the items are the content.
 
 <template>
-  <article>
+  <article class="content">
     <!-- Navigation Tabs  -->
     <nav class="tabs-container">
       <ul class="tabs-list">
@@ -35,13 +35,14 @@
         </slot>
       </div>
     </transition-group>
-    <slot name="ref"> </slot>
+    <slot v-if="incomingData[selectedTab]['img']" name="ref"> </slot>
     <slot name="date"> </slot>
   </article>
 </template>
 
 <script>
 export default {
+  name: "TabsExtension",
   props: {
     tabs: {
       type: Array,
@@ -72,7 +73,7 @@ export default {
       },
     },
   },
-  name: "Tabs",
+
   data() {
     return {
       selectedTab: null,
@@ -122,9 +123,8 @@ ul {
   border-bottom: 2.5px solid #fc6b57;
 }
 
-.card {
-  &__img {
-    max-width: 90vw;
-  }
+.content {
+  height: 500px;
+  overflow: hidden;
 }
 </style>

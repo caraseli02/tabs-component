@@ -40,7 +40,7 @@
         subtitle="Adaptability"
       />
       <TabsAdaptability :showIcons="true">
-        <Skeleton :count="2" height="100px" />
+        <Skeleton :count="2" height="70px" />
         <span>Loading...</span>
       </TabsAdaptability>
     </section>
@@ -51,7 +51,7 @@
         subtitle="Inversion"
         :code="codeInversion"
       />
-      <TabsInversion :incomingData="tabsContent" :tabs="tabs"> </TabsInversion>
+      <TabsInversion />
     </section>
     <!-- EXTENSION EXAMPLE -->
     <section id="Props" class="codeExample {">
@@ -79,7 +79,6 @@ import TabsAdaptability from "@/components/TabsAdaptability.vue";
 import TabsExtension from "@/components/TabsExtension.vue";
 import TabsInversion from "@/components/TabsInversion.vue";
 import TabsInfo from "@/components/TabsInfo.vue";
-import tabsContent from "@/data/tabsContent";
 import {
   codeConfig,
   codeAdaptability,
@@ -94,11 +93,7 @@ export default {
   name: "App",
   data() {
     return {
-      tabs: ["Tab 1", "Tab 2", "Tab 3", "Tab 4", "Tab 5"],
       links: ["Default", "Props", "Slots"],
-      //import Tabs Content Data from @/data/tabsContent.js
-      //same as tabsContent : tabsContent
-      tabsContent,
       codeTemplating,
       codeConfig,
       codeAdaptability,
@@ -141,6 +136,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+nav {
+  margin: 2%;
 }
 
 h2 {

@@ -3,7 +3,7 @@
 // and the items are the content.
 
 <template>
-  <article>
+  <article class="content">
     <!-- Navigation Tabs  -->
     <nav class="tabs-container">
       <ul class="tabs-list">
@@ -117,5 +117,10 @@ ul {
 }
 .active {
   border-bottom: 2.5px solid #fc6b57;
+}
+
+.content {
+  height: 400px;
+  overflow: hidden;
 }
 </style>
