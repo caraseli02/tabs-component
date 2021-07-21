@@ -14,7 +14,7 @@
       :class="{ active: selectedTab === index }"
     >
       <i v-if="showIcons" :class="tab.icon"></i>
-      {{ tab.name }}
+      {{ tab.name ? tab.name : tab }}
     </span>
     <slot>Loading...</slot>
   </nav>

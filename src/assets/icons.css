@@ -78,7 +78,7 @@
   box-sizing: border-box;
   position: relative;
   display: block;
-  transform: scale(var(--ggs,1));
+  transform: scale(var(--ggs, 1));
   width: 14px;
   height: 16px;
   border: 2px solid transparent;
@@ -87,64 +87,87 @@
   box-shadow: 0 0 0 2px;
   border-radius: 1px;
   border-top-right-radius: 4px;
-  overflow: hidden
- }
- 
- .gg-file-document::after,
- .gg-file-document::before {
+  overflow: hidden;
+}
+
+.gg-file-document::after,
+.gg-file-document::before {
   content: "";
   display: block;
   box-sizing: border-box;
-  position: absolute
- }
- 
- .gg-file-document::before {
+  position: absolute;
+}
+
+.gg-file-document::before {
   background: currentColor;
-  box-shadow:
-  0 4px 0,
-  -6px -4px 0;
+  box-shadow: 0 4px 0, -6px -4px 0;
   left: 0;
   width: 10px;
   height: 2px;
-  top: 8px
- }
- 
- .gg-file-document::after {
+  top: 8px;
+}
+
+.gg-file-document::after {
   width: 6px;
   height: 6px;
   border-left: 2px solid;
   border-bottom: 2px solid;
   right: -1px;
-  top: -1px
- } 
+  top: -1px;
+}
 
-   .gg-credit-card {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 24px;
-    height: 18px;
-    border: 2px solid;
-    border-radius: 4px
-   }
-   
-   .gg-credit-card::after,
-   .gg-credit-card::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    border-radius: 3px;
-    width: 24px;
-    left: -2px;
-    height: 2px;
-    background: currentColor;
-    top: 9px
-   }
-   
-   .gg-credit-card::before {
-    width: 6px;
-    left: 2px;
-    top: 3px
-   } 
+.gg-credit-card {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 24px;
+  height: 18px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.gg-credit-card::after,
+.gg-credit-card::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 24px;
+  left: -2px;
+  height: 2px;
+  background: currentColor;
+  top: 9px;
+}
+
+.gg-credit-card::before {
+  width: 6px;
+  left: 2px;
+  top: 3px;
+}
+
+.gg-chevron-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.gg-chevron-down::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  left: 4px;
+  top: 2px;
+}
